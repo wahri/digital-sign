@@ -76,8 +76,8 @@
                                                     <div class="input-group">
                                                         <form action="<?= base_url('mahasiswa/pengajuan/buatsurat/') ?>" method="POST">
                                                             <select name="semester" class="form-control">
-                                                                <option value="20191">20191</option>
-                                                                <option value="20192">20192</option>
+                                                                <option value="20201">20201</option>
+                                                                <option value="20202">20202</option>
                                                             </select>
                                                             <span class="input-group-btn">
                                                                 <button type="submit" class="btn btn-info">Ajukan</button>

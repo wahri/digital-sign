@@ -71,7 +71,7 @@
                                  <div class="form-group">
                                      <select name="user" class="form-control" onchange="location = this.value;">
                                          <option value="<?= base_url('admin/user/index/admin') ?>" <?= $user_account == 'admin' ? 'selected' : '' ?>>Admin</option>
-                                         <option value="<?= base_url('admin/user/index/dosen') ?>" <?= $user_account == 'dosen' ? 'selected' : '' ?>>Dosen</option>
+                                         <option value="<?= base_url('admin/user/index/dosen') ?>" <?= $user_account == 'dosen' ? 'selected' : '' ?>>Pegawai</option>
                                          <option value="<?= base_url('admin/user/index/mahasiswa') ?>" <?= $user_account == 'mahasiswa' ? 'selected' : '' ?>>Mahasiswa</option>
                                      </select>
                                  </div>
@@ -79,7 +79,7 @@
 
                                      <form action="" method="post" enctype="multipart/form-data">
                                          <div class="form-group">
-                                             <label>NIDN <span class="required">*</span></label>
+                                             <label>Username <span class="required">*</span></label>
                                              <input type="text" class="form-control" name="nidn" required>
                                          </div>
                                          <div class="form-group">
@@ -108,7 +108,7 @@
 
                                          <div class="ln_solid"></div>
                                          <div class="form-group">
-                                             <button type="submit" value="1" name="dosen" class="btn btn-success">Tambah User Dosen</button>
+                                             <button type="submit" value="1" name="dosen" class="btn btn-success">Tambah User</button>
                                          </div>
                                      </form>
                                  <?php elseif ($user_account == 'mahasiswa') : ?>
@@ -190,7 +190,7 @@
                                          <table class="table">
                                              <thead>
                                                  <tr>
-                                                     <th>NIDN</th>
+                                                     <th>Username</th>
                                                      <th>Nama</th>
                                                      <th>Level</th>
                                                      <th>Action</th>
@@ -203,7 +203,8 @@
                                                          <td><?= $d['nama'] ?></td>
                                                          <td><?= $d['level'] == 1 ? 'Tatausaha' : 'Dekan' ?></td>
                                                          <td>
-                                                             <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                                                             <a href="<?= base_url('admin/user/hapususer/dosen/') . $d['id_dosen'] ?>" class="btn btn-sm btn-danger">Hapus</a>
+                                                             <a href="<?= base_url('admin/user/edit/dosen/') . $d['id_dosen'] ?>" class="btn btn-sm btn-warning">Edit</a>
                                                          </td>
                                                      </tr>
                                                  <?php endforeach; ?>
@@ -213,7 +214,7 @@
                                          <table class="table">
                                              <thead>
                                                  <tr>
-                                                     <th>NIDN</th>
+                                                     <th>NIM</th>
                                                      <th>Nama</th>
                                                      <th>Level</th>
                                                      <th>Action</th>
@@ -237,7 +238,8 @@
                                                              <?php endif; ?>
                                                          </td>
                                                          <td>
-                                                             <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                                                             <a href="<?= base_url('admin/user/hapususer/mahasiswa/') . $d['id_mahasiswa'] ?>" class="btn btn-sm btn-danger">Hapus</a>
+                                                             <a href="<?= base_url('admin/user/edit/mahasiswa/') . $d['id_mahasiswa'] ?>" class="btn btn-sm btn-warning">Edit</a>
                                                          </td>
                                                      </tr>
                                                  <?php endforeach; ?>
@@ -270,7 +272,8 @@
                                                              <?php endif; ?>
                                                          </td>
                                                          <td>
-                                                             <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                                                             <a href="<?= base_url('admin/user/hapususer/admin/') . $d['id_admin'] ?>" class="btn btn-sm btn-danger">Hapus</a>
+                                                             <a href="<?= base_url('admin/user/edit/admin/') . $d['id_admin'] ?>" class="btn btn-sm btn-warning">Edit</a>
                                                          </td>
                                                      </tr>
                                                  <?php endforeach; ?>

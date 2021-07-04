@@ -4,6 +4,7 @@ class Dashboard extends Mahasiswa_Controller
 {
     public function index()
     {
+        $this->data['surat'] = $this->db->get_where('pengajuan_surat', ['nim' => $this->data['user']['nim'], 'approve_tu' => 1, 'approve_dekan' => 1])->num_rows();
         $title = [
             'nama' => 'Wahyu Nuzul Bahri',
             'nim' => '180401187',

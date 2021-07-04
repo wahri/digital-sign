@@ -142,8 +142,8 @@
                                                                              <p>Prodi : <?= $d['prodi'] ?></p>
                                                                          </div>
                                                                          <div class="modal-footer">
-                                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                             <a href="<?= base_url('tatausaha/surat/setujui/') . $d['id_pengajuan'] . '/' . $d['nim'] ?>" class="btn btn-danger">Tolak</a>
+                                                                             <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal">Close</button>
+                                                                             <a href="<?= base_url('tatausaha/surat/tolak/') . $d['id_pengajuan'] . '/' . $d['nim'] ?>" class="btn btn-danger">Tolak</a>
                                                                              <a href="<?= base_url('tatausaha/surat/setujui/') . $d['id_pengajuan'] . '/' . $d['nim'] ?>" class="btn btn-primary">Setujui</a>
                                                                          </div>
 

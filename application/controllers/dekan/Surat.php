@@ -79,7 +79,7 @@ class Surat extends Dekan_Controller
 
         $qrcode = date('Ymd_' . $data['nomor_surat']) . '.png'; //buat name dari qr code sesuai dengan nim
 
-        $params['data'] = base_url('cek_surat/' . $encrypt); //data yang akan di jadikan QR CODE
+        $params['data'] = base_url('Cek_Surat/index/' . $encrypt); //data yang akan di jadikan QR CODE
         $params['level'] = 'H'; //H=High
         $params['size'] = 10;
         $params['savename'] = FCPATH . $config['imagedir'] . $qrcode; //simpan image QR CODE ke folder assets/qrcode/

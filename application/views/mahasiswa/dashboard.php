@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Dashboard</title>
 
     <!-- Bootstrap -->
     <link href="<?= base_url('assets/admin/') ?>vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,26 +35,30 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3><?= $title ?></h3>
+                            <h3>Dashboard Mahasiswa</h3>
                         </div>
                     </div>
 
                     <div class="clearfix"></div>
                     <div class="x_title"></div>
 
-                    <!-- <div class="row">
+                    <div class="row">
                         <div class="col-md-12 col-sm-12  ">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Plain Page</h2>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-                                    Add content to the page ...
+                            <div class="x_content">
+                                <div class="row">
+                                    <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                                        <div class="tile-stats">
+                                            <div class="icon"><i class="fa fa-envelope"></i>
+                                            </div>
+                                            <div class="count"><?= $surat ?></div>
+
+                                            <h3>Surat Terbit</h3>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <!-- /page content -->
